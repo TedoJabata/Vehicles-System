@@ -24,11 +24,10 @@ public:
 		this->serialNum = num;
 	}
 	void PrintInfo() {
-		cout << "Name: " << name << "\nSerial Number: " << serialNum;
-
+		cout << "\nName: " << name << "\nSerial number: " << serialNum;
 	}
 
-	virtual void DisplayAlert() {};
+	virtual void DisplayAlert(int battery) {};
 
 	~FourWheelerVehicle() {};
 };
