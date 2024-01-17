@@ -22,13 +22,13 @@ public:
 		kmTraveledSincleLastCharge = km;
 	}
 	void CheckBattery() {
-		int battery = (kmTraveledSincleLastCharge / float (maxRangeKm))*100;
-		if (battery < 15)
+		int battery = 100 - (kmTraveledSincleLastCharge / float (maxRangeKm))*100;
+		if (battery < 8)
 		{
-			DisplayAlert(15);
-		}
-		else if (battery < 8) {
 			DisplayAlert(8);
+		}
+		else if (battery < 15) {
+			DisplayAlert(15);
 		}
 		cout << "\nBattery is on " << battery << '%';
 	}
@@ -43,13 +43,14 @@ public:
 			{
 				cout << "\nBATTERY LOW!";
 			}
+			break;
 		default:
 			break;
 		}
 	}
 	void PrintInfo() {
 		FourWheelerVehicle::PrintInfo();
-		cout << "\nMax range: " << maxRangeKm << "km\nKilometers traveled since last charge: " << kmTraveledSincleLastCharge;
+		cout << "\nMax range: " << maxRangeKm << "km\nKilometers traveled since last charge: " << kmTraveledSincleLastCharge << "km";
 	}
 	~ElectricCar() {};
 };

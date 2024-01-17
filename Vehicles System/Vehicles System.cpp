@@ -4,12 +4,12 @@ using namespace std;
 
 int main()
 {
-    ElectricCar* cars[2];
+    ElectricCar* cars[1];
 	string name;
 	int serialNum;
 	int maxRange;
 	int kmTraveled;
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 1; i++)
 	{
 		cout << "\nEnter car name: ";
 		cin >> name;
@@ -28,12 +28,12 @@ int main()
 
 		cars[i] = new ElectricCar(maxRange, kmTraveled, name, serialNum);
 	}
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 1; i++)
 	{
 		cout << "\n\nCar " << i + 1;
 		cars[i]->PrintInfo();
 	}
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 1; i++)
 	{
 		cout << "\n\nCar " << i + 1;
 		cars[i]->CheckBattery();
