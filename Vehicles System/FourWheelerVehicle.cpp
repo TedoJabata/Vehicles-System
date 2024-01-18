@@ -4,17 +4,17 @@ using namespace std;
 class FourWheelerVehicle {
 private:
 	string name;
-	int serialNum;
+	string serialNum;
 
 public:
-	FourWheelerVehicle(string name, int serialNum) {
+	FourWheelerVehicle(string name, string serialNum) {
 		this->name = name;
 		this->serialNum = serialNum;
 	}
 	string GetName(){
 		return name;
 	}
-	int GetSerialNum() {
+	string GetSerialNum() {
 		return serialNum;
 	}
 	string SetName(string name) {

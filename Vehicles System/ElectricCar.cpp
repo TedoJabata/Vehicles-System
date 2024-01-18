@@ -5,7 +5,7 @@ private:
 	int maxRangeKm;
 	int kmTraveledSincleLastCharge;
 public:
-	ElectricCar(int maxRange, int kmTraveled, string _name, int _serialNum) : FourWheelerVehicle(_name, _serialNum) {
+	ElectricCar(int maxRange, int kmTraveled, string _name, string _serialNum) : FourWheelerVehicle(_name, _serialNum) {
 		maxRangeKm = maxRange;
 		kmTraveledSincleLastCharge = kmTraveled;
 	}
